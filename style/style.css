@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
   font-family: "Shabnam";
-  src: url("./fonts/Shabnam.woff") format("woff");
+  src: url("../fonts/Shabnam.woff") format("woff");
 }
 
 /* Css Variables  */
@@ -37,7 +37,7 @@
 
   /*========== Font weight ==========*/
   --font-medium: 500;
-  --font-semi-bold: 600;
+  --font-semi-bold: 700;
 
   /*========== Margenes Bottom ==========*/
   --mb-0-25: 0.25rem;
@@ -161,3 +161,93 @@ input {
   gap: 1.5rem;
 }
 
+/* hedear style */
+.header {
+  direction: rtl;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: var(--z-fixed);
+  background: var(--first-color);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--white-color);
+}
+
+.nav__logo {
+  font-size: var(--font-semi-bold);
+}
+
+.nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav__menu {
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background: var(--body-color);
+    top: 0;
+    left: -105%;
+    width: 50%;
+    height: 100%;
+    box-shadow: -1px 0 4px hsla(var(--hue-color), 64%, 15%, 0.15);
+    padding: 1rem;
+    transition: 0.4s linear;
+  }
+}
+
+.show-menu {
+  left: 0;
+}
+
+.nav__list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  top: 3rem;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__item {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid var(--scroll-bar-color);
+}
+
+.nav__link {
+  color: var(--text-color-light);
+  font-weight: var(--font-semi-bold);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--text-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--title-color);
+}
