@@ -381,3 +381,47 @@ input {
   background: none;
   padding: 0;
 }
+
+/* About Style */
+.about__data {
+  direction: rtl;
+  text-align: center;
+}
+
+.about-container {
+  row-gap: 2rem;
+}
+
+.about__description {
+  margin-bottom: var(--mb-2);
+}
+
+.about__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.about__img-overlay {
+  overflow: var(--img-hidden);
+}
+
+.about__img-one {
+  width: 8rem;
+}
+
+.about__img-two {
+  width: 11rem;
+}
+
+.about__img-one,
+.about__img-two {
+  cursor: pointer;
+  transition: var(--img-transition);
+}
+
+.about__img-one:hover,
+.about__img-two:hover {
+  transform: var(--img-scale);
+}
