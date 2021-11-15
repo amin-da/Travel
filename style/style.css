@@ -425,3 +425,48 @@ input {
 .about__img-two:hover {
   transform: var(--img-scale);
 }
+
+/* discover style */
+
+.dsicover__card {
+  position: relative;
+  width: 12rem;
+  overflow: var(--img-hidden);
+}
+
+.discover__data {
+  direction: rtl;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.discover__title,
+.discover__description {
+  color: var(--white-color);
+}
+
+.discover__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+
+.discover__description {
+  font-size: var(--small-font-size);
+  display: block;
+}
+
+.discover__img {
+  cursor: pointer;
+  transition: var(--img-transition);
+}
+
+.discover__img:hover {
+  transform: var(--img-scale);
+}
+
+/* رفع ایراد بک گراندی که سویپر به ایتم های کناری در پایین آنها اضافه میکرد */
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}

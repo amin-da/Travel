@@ -38,3 +38,21 @@ function scrollHeader() {
   }
 }
 window.addEventListener("scroll", scrollHeader);
+
+// swiper for discover section
+
+let swiper = new Swiper(".discover__container", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  loop: true,
+  spaceBetween: 2,
+  coverflowEffect: {
+    rotate: 40,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true
+  }
+});

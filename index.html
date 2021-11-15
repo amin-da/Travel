@@ -11,6 +11,10 @@
       rel="stylesheet"
     />
 
+    <!-- swiper css link -->
+
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+
     <!-- css style link -->
     <link rel="stylesheet" href="./style/style.css" />
   </head>
@@ -48,6 +52,7 @@
 
     <!-- main section starts -->
     <main class="main">
+
       <!-- home section starts -->
       <section class="home" id="home">
         <img src="./assets/img/home1.jpg" alt="" class="home__img" />
@@ -134,11 +139,72 @@
       </section>
       <!-- about section ends -->
 
-      <section class="discover section" id="discover"></section>
+      <!-- discover section start -->
+      <section class="discover section" id="discover">
+        <h2 class="section__title">
+          جذاب ترین سواحل
+          <br>
+          را ببینید
+        </h2>
+
+        <div class="discover__container container swiper">
+
+          <div class="swiper-wrapper">
+
+            <div class="dsicover__card swiper-slide">
+              <img src="./assets/img/115203.jpg" alt="" class="discover__img">
+              <div class="discover__data">
+                  <h2 class="discover__title">چالوس</h2>
+                  <span class="discover__description">
+                    24 تور موجود است
+                  </span>
+              </div>
+            </div>
+
+            <div class="dsicover__card swiper-slide">
+                <img src="./assets/img/discover2.jpg" alt="" class="discover__img">
+                <div class="discover__data">
+                    <h2 class="discover__title">کنارک</h2>
+                    <span class="discover__description">
+                      17 تور موجود است
+                    </span>
+                </div>
+            </div>
+
+            <div class="dsicover__card swiper-slide">
+                <img src="./assets/img/discover3.jpg" alt="" class="discover__img">
+                <div class="discover__data">
+                    <h2 class="discover__title">قشم</h2>
+                    <span class="discover__description">
+                      34 تور موجود است
+                    </span>
+                </div>
+            </div>
+
+             <div class="dsicover__card">
+                  <img src="./assets/img/discover4.jpg" alt="" class="discover__img">
+                  <div class="discover__data">
+                      <h2 class="discover__title">نور</h2>
+                      <span class="discover__description">
+                        20 تور موجود است
+                      </span>
+                  </div>
+              </div>
+
+
+          </div>
+
+        </div>
+      </section>
+      <!-- discover section ends -->
+
       <section class="" id=""></section>
     </main>
     <!-- main section ends -->
 
+
+    <!-- swiper js file -->
+    <script src="./js/swiper-bundle.min.js"></script>
     <!-- js file -->
     <script src="./js/index.js"></script>
   </body>
