@@ -56,3 +56,35 @@ let swiper = new Swiper(".discover__container", {
     slideShadows: true
   }
 });
+
+// Video Functionality
+
+const videoFile = document.getElementById("video-file");
+const videoButton = document.getElementById("video-button");
+const videoIcon = document.getElementById("video-icon");
+
+function playPause() {
+  if (videoFile.paused) {
+    //play video
+    videoFile.play();
+    //change icon
+    videoIcon.classList.remove("ri-play-line");
+    videoIcon.classList.add("ri-pause-line");
+  } else if (videoFile.play) {
+    //pause video
+    videoFile.pause();
+
+    //change icon
+    videoIcon.classList.remove("ri-pause-line");
+    videoIcon.classList.add("ri-play-line");
+  }
+}
+
+videoButton.addEventListener("click", playPause);
+
+//when video end change icon
+function endVideo() {
+  videoIcon.classList.remove("ri-pause-line");
+  videoIcon.classList.add("ri-play-line");
+}
+videoFile.addEventListener("ended", endVideo);
