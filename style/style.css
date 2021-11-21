@@ -286,6 +286,23 @@ input {
   color: var(--title-color);
 }
 
+/* active link */
+.active-link{
+  position: relative;
+  color: var(--title-color);
+}
+
+.active-link::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--title-color);
+  bottom: -0.17rem;
+  left: 0;
+}
+
+
 /* Home style */
 .home__img {
   position: absolute;
@@ -707,6 +724,7 @@ input {
 .footer__container {
   row-gap: 7rem;
   direction: rtl;
+  text-align: center;
 }
 
 .footer__content {
@@ -775,4 +793,31 @@ input {
 }
 .footer__terms-link:hover{
   color: var(--text-color);
+}
+
+/* scroll up button */
+
+.scroll__up{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  padding: 0.5rem;
+  background-color: var(--first-color);
+  display: flex;
+  opacity: 0.9;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+}
+
+.scroll__up:hover{
+  background-color: var(--first-color-alt);
+  opacity: 1;
+}
+
+.scrollup__icon{
+  color: var(--white-color);
+}
+/* show-scroll button */
+.show-scroll{
+  bottom: 3rem;
 }
