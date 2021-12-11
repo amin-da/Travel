@@ -150,6 +150,9 @@ if (selectedTheme) {
   );
 }
 
+// button change sound
+let btnAudio = new Audio('../assets/sound/3.wav');
+
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener("click", () => {
   // Add or remove the dark / icon theme
@@ -158,6 +161,7 @@ themeButton.addEventListener("click", () => {
   // We save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+  btnAudio.play();
 
   //change Theme name
   if (document.body.classList.contains(darkTheme)) {
@@ -169,7 +173,7 @@ themeButton.addEventListener("click", () => {
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
-  distance: "60px",
+  distance: "50px",
   duration: 2300
   // reset: true,
 });
@@ -190,7 +194,7 @@ sr.reveal(
 
 sr.reveal(
   `
-        .about__img-overlay, 
+          .about__img-overlay, 
            .video__description,
            .subscribe__description`,
   {

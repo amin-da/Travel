@@ -378,6 +378,10 @@ input {
 .home__info {
   color: var(--white-color);
 }
+.home__data{
+  position: absolute;
+  top: 10%;
+}
 
 .home__data-subtitle {
   display: block;
@@ -392,9 +396,11 @@ input {
 }
 
 .home__social {
+  position: absolute;
   display: flex;
   flex-direction: column;
   row-gap: 0.8rem;
+  bottom: 0;
 }
 .home__social-link {
   font-size: 1.2rem;
@@ -850,7 +856,7 @@ input {
 .scroll__up {
   position: fixed;
   right: 1rem;
-  bottom: -20%;
+  bottom: -10%;
   padding: 0.5rem;
   background-color: var(--first-color);
   display: flex;
@@ -869,7 +875,7 @@ input {
 }
 /* show-scroll button */
 .show-scroll {
-  bottom: 3rem;
+  bottom: 1.5rem;
 }
 
 /*************************** Media queris *********************/
@@ -895,6 +901,16 @@ input {
   .home__info {
     width: 11rem;
     padding: 1rem;
+    bottom: 0rem;
+  }
+  .home__container,
+  .home__img{
+    height:95vh;
+    /* object-position: 0 -0.7rem; */
+  }
+
+  .home__social {
+    /* margin-bottom: 1rem; */
   }
 
   .experience__img,
@@ -902,9 +918,37 @@ input {
     padding: 0rem;
   }
 }
+@media screen and (max-width: 350px) {
+  .home__info {
+    width: 12rem;
+    padding: 1rem;
+    bottom: 0rem;
+    text-align: center;
+    
+  }
+ 
+  .home__social {
+    /* margin-bottom: 1rem; */
+  }
+}
+@media screen and (min-width: 355px) {
+  .home__info {
+    bottom: 0.2rem;
+  }
+  .home__social {
+    bottom: 1rem;
+  }
+}
 
 /* medium device */
 @media screen and (min-width: 568px) {
+  body{
+    border: 5px solid slateblue;
+  }
+  .home__info {
+    /* width: 11rem; */
+    bottom: 0;
+  }
   .video__container {
     display: grid;
     grid-template-columns: 0.8fr;
@@ -924,6 +968,7 @@ input {
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
+    border:3px solid red;
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
@@ -1007,6 +1052,7 @@ input {
     column-gap: 2rem;
   }
   .home__info {
+    bottom: -3rem;
     padding: 1rem;
   }
 
@@ -1043,7 +1089,12 @@ input {
 
 /* for large devices */
 @media screen and (min-width: 1024px) {
+  body{
+    margin: 0;
+    border: 3px solid yellow;
+  }
   .container {
+    max-width: 95vw;
     margin: 0 auto;
   }
 
@@ -1052,7 +1103,7 @@ input {
   }
 
   .home__info {
-    width: 17rem;
+    width: 15rem;
     grid-template-columns: 1fr 3fr;
   }
 
@@ -1118,6 +1169,10 @@ input {
 }
 
 @media screen and (min-width: 1200px){
+  body{
+    margin: 0;
+    border: 2px solid blue;
+  }
 
   .container{
     max-width: 95vw;
@@ -1134,12 +1189,19 @@ input {
 
   .home__container,
   .home__img{
-    height: 75vh;
+    height:80vh;
     object-position: 0 -0.7rem;
+  }
+
+  .home__data{
+    margin-top: 2rem;
   }
 
   .home__info{
     left: 4.5vw;
+  }
+  .home__social {
+    bottom: 1rem;
   }
 
 }
