@@ -942,9 +942,7 @@ input {
 
 /* medium device */
 @media screen and (min-width: 568px) {
-  body{
-    border: 5px solid slateblue;
-  }
+ 
   .home__info {
     /* width: 11rem; */
     bottom: 0;
@@ -1091,7 +1089,7 @@ input {
 @media screen and (min-width: 1024px) {
   body{
     margin: 0;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
   }
   .container {
     max-width: 95vw;
@@ -1171,7 +1169,6 @@ input {
 @media screen and (min-width: 1200px){
   body{
     margin: 0;
-    border: 2px solid blue;
   }
 
   .container{
